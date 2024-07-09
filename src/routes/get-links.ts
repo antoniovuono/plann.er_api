@@ -1,10 +1,7 @@
 import { FastifyInstance } from "fastify";
-import {  ZodTypeProvider } from "fastify-type-provider-zod";
+import { ZodTypeProvider } from "fastify-type-provider-zod";
 import { z } from "zod";
 import { prisma } from "../lib/prisma";
-import { getMailClint } from "../lib/mail";
-import nodemailer from "nodemailer"
-import { dayjs } from "../lib/dayjs";
 
 export async function getLinks(app: FastifyInstance) {
     app.withTypeProvider<ZodTypeProvider>().get('/trips/:tripId/links', {
