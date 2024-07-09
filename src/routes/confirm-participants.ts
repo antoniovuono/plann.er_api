@@ -1,7 +1,6 @@
 import { FastifyInstance } from "fastify";
 import {  ZodTypeProvider } from "fastify-type-provider-zod";
 import { z } from "zod";
-import { getMailClint } from "../lib/mail";
 import 'dayjs/locale/pt-br'
 import localizedFormat from 'dayjs/plugin/localizedFormat'
 import { prisma } from "../lib/prisma";
